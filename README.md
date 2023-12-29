@@ -1,2 +1,0 @@
-# Remedgit.github.io
-Welcome
