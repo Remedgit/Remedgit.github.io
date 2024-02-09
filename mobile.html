@@ -16,10 +16,6 @@
         }
 
         header {
-            background: linear-gradient(to bottom, #1a237e, #fff); /* 从深蓝到白的渐变 */
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
         }
 
         nav {
@@ -27,13 +23,6 @@
             color: #1a237e;
             padding: 1em;
             text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            text-decoration: none;
-            color: #1a237e;
-            margin: 0 1em;
         }
 
         main {
@@ -68,15 +57,24 @@
 <body>
 
     <header>
-        <h1>Remedgit的部落格</h1>
-    </header>
+        <div class="mdui-toolbar mdui-color-theme">
+  <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">menu</i>
+  </a>
+  <span class="mdui-typo-title">Title</span>
+  <div class="mdui-toolbar-spacer"></div>
+  <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">search</i>
+  </a>
+  <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">refresh</i>
+  </a>
+  <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">more_vert</i>
+  </a>
+</div>
 
-    <nav>
-        <button class="mdui-btn mdui-ripple mdui-btn-raised"><a href="http://remedgit.github.io">首页</a></button>
-        <button class="mdui-btn " disabled><a href="#">标签</a></button>
-        <button class="mdui-btn mdui-ripple"><a href="http://remedgit.github.io/notice.html">公告</a></button>
-        <button class="mdui-btn mdui-ripple"><a href="http://remedgit.github.io/about.html">关于</a></button>
-    </nav>
+    </header>
 
     <main>
           <div class="mdui-container">
