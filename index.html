@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  window.onload = function() {
+    // 检测设备类型
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    // 根据设备类型自动跳转到不同的网站
+    if (isMobile) {
+      window.location.href = 'https://remedgit.github.io/mobile.html';
+    } else {
+      window.location.href = 'https://remedgit.github.io/computer.html';
+    }
+  };
+</script>
+</head>
+<body>
+  <p>检测您的设备</p>
+</body>
+</html>
