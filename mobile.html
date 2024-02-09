@@ -33,13 +33,27 @@
 
     <header>
         <div class="mdui-toolbar mdui-color-indigo">
-  <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+  <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#attr'}">
     <i class="mdui-icon material-icons">menu</i>
   </a>
   <span class="mdui-typo-title">RemedgitBlog</span>
   <div class="mdui-toolbar-spacer"></div>
 </div>
-
+<ul class="mdui-menu" id="attr">
+  <li class="mdui-menu-item">
+    <a href="http://remedgit.github.io" class="mdui-ripple">主页</a>
+  </li>
+  <li class="mdui-menu-item" disabled>
+    <a href="javascript:;">标签</a>
+  </li>
+  <li class="mdui-menu-item">
+    <a href="http://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
+  </li>
+  <li class="mdui-divider"></li>
+  <li class="mdui-menu-item">
+    <a href="http://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
+  </li>
+</ul>
     </header>
 
     <main>
