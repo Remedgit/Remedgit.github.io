@@ -16,24 +16,6 @@
         }
 
         header {
-            background: linear-gradient(to bottom, #1a237e, #fff); /* 从深蓝到白的渐变 */
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        nav {
-            background: #fff; /* 导航栏背景设置为白色 */
-            color: #1a237e;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            text-decoration: none;
-            color: #1a237e;
-            margin: 0 1em;
         }
 
         main {
@@ -66,18 +48,33 @@
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
 </head>
 <body>
-
     <header>
-        <h1>Remedgit的部落格</h1>
+       <div class="mdui-toolbar mdui-color-indigo">
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-1'}">
+    <i class="mdui-icon material-icons">menu</i>
+  </button>
+     <ul class="mdui-menu" id="example-1">
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io" class="mdui-ripple">主页</a>
+      </li>
+      <li class="mdui-menu-item" disabled>
+        <a href="javascript:;">标签</a>
+      </li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
+      </li>
+      <li class="mdui-divider"></li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
+      </li>
+    </ul>
+  <span class="mdui-typo-title">RemedgitBlog</span>
+  <div class="mdui-toolbar-spacer"></div>
+    <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">&#xe338;</i>
+  </a>
+</div>
     </header>
-
-    <nav>
-        <button class="mdui-btn mdui-ripple mdui-btn-raised"><a href="http://remedgit.github.io">首页</a></button>
-        <button class="mdui-btn " disabled><a href="#">标签</a></button>
-        <button class="mdui-btn mdui-ripple"><a href="http://remedgit.github.io/notice.html">公告</a></button>
-        <button class="mdui-btn mdui-ripple"><a href="http://remedgit.github.io/about.html">关于</a></button>
-    </nav>
-
     <main>
          <article class="mdui-ripple mdui-hoverable">
             <h2>Minecraft一键造房</h2>
@@ -101,5 +98,13 @@
         <p>tips:手机访问能有更好的效果哦</p>
     </footer>
 <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script type="text/javascript">
+      var $ = mdui.$;
+      $('#open').on('click', function () {
+        mdui.snackbar({
+          message: 'Message sent'
+        });
+      });
+    </script>
 </body>
 </html>

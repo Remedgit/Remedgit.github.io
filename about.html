@@ -5,35 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remedgit's Blog</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #1a237e, #fff); /* 从深蓝到白的渐变 */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
         header {
-            background: linear-gradient(to bottom, #1a237e, #fff); /* 从深蓝到白的渐变 */
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        nav {
-            background: #fff; /* 导航栏背景设置为白色 */
-            color: #1a237e;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            text-decoration: none;
-            color: #1a237e;
-            margin: 0 1em;
         }
 
         main {
@@ -55,42 +28,61 @@
             text-align: center;
             padding: 1em 0;
         }
-        about {
+                about {
         text-align: center;
 }
 
-  .center-button {
-      display: block;
-      margin: 0 auto;
-      width: 100px; /* 按钮的宽度 */
-      padding: 10px; /* 按钮的内边距 */
-      text-align: center; /* 文本居中 */
-    }
-
     </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
 </head>
 <body>
-
     <header>
-        <h1>关于</h1>
+       <div class="mdui-toolbar mdui-color-indigo">
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-1'}">
+    <i class="mdui-icon material-icons">menu</i>
+  </button>
+     <ul class="mdui-menu" id="example-1">
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io" class="mdui-ripple">主页</a>
+      </li>
+      <li class="mdui-menu-item" disabled>
+        <a href="javascript:;">标签</a>
+      </li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
+      </li>
+      <li class="mdui-divider"></li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
+      </li>
+    </ul>
+  <span class="mdui-typo-title">RemedgitBlog</span>
+  <div class="mdui-toolbar-spacer"></div>
+    <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">&#xe338;</i>
+  </a>
+</div>
     </header>
-
-    <nav>
-        <a href="http://remedgit.github.io">首页</a>
-        <a href="#">标签</a>
-        <a href="http://remedgit.github.io/notice.html">公告</a>
-        <a href="http://remedgit.github.io/about.html">关于</a>
-    </nav>
-
     <main>
-    <about>
+            <about >
     <h1>这是Remedgit的博客</h1>
 <br>
 <p>找到我</p>
-
-  <button class="center-button"><a href="https://space.bilibili.com/1782381219">Bilibili</a></button>
-
-  <button class="center-button"><a href="https://github.com/Remedgit">Github</a></button>
+    <div class="mdui-row-xs-2">
+  <div class="mdui-col">
+    <a href="https://space.bilibili.com/1782381219" class="mdui-btn mdui-btn-block  mdui-ripple">bilibili</a>
+  </div>
+  <div class="mdui-col">
+    <a href="https://github.com/Remedgit" class="mdui-btn mdui-btn-block  mdui-ripple">github</a>
+  </div>
+</div>
 
 <p>2023/12/28搭建完毕</p>
 <br>
@@ -100,8 +92,16 @@
 
     <footer>
         <p>Remedgit</p>
+        <p>tips:手机访问能有更好的效果哦</p>
     </footer>
-
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script type="text/javascript">
+      var $ = mdui.$;
+      $('#open').on('click', function () {
+        mdui.snackbar({
+          message: 'Message sent'
+        });
+      });
+    </script>
 </body>
 </html>
-
