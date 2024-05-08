@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remedgit's Blog</title>
+    <style>
+
+        header {
+        }
+
+        main {
+            text-align: center;
+            background: #fff; /* 主要内容区域背景设置为白色 */
+            padding: 1em;
+            flex: 1;
+        }
+
+        article {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            background: #fff; /* 将底部背景色设置为白色 */
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+</head>
+<body>
+    <header>
+       <div class="mdui-toolbar mdui-color-indigo">
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-1'}">
+    <i class="mdui-icon material-icons">menu</i>
+  </button>
+     <ul class="mdui-menu" id="example-1">
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io" class="mdui-ripple">主页</a>
+      </li>
+      <li class="mdui-menu-item" disabled>
+        <a href="javascript:;">标签</a>
+      </li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
+      </li>
+      <li class="mdui-divider"></li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
+      </li>
+    </ul>
+  <span class="mdui-typo-title">RemedgitBlog</span>
+  <div class="mdui-toolbar-spacer"></div>
+    <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">&#xe338;</i>
+  </a>
+</div>
+    </header>
+    <main>
+        <h1>下载BlogApp</h1>
+        <p>经过了了漫长的测试，终于把客户端做好了，Android HMOS(原生的!!!) iOS全部支持</p>
+        <button class="mdui-btn mdui-ripple mdui-ripple-white mdui-color-indigo mdui-btn-raised" onclick="window.location.href='http://remedgit.github.io/files/BlogApp/Android.apk'">Android</button>
+        <button class="mdui-btn mdui-ripple mdui-ripple-white mdui-color-indigo mdui-btn-raised" onclick="window.location.href='http://remedgit.github.io/files/BlogApp/iOS.ipa'">iOS(iPA自签)</button>
+        <br>
+        <p>Remedgit很菜，设计比较丑，不精通iOS开发，所以布局仅针对14 15ProMax机型设计的，其他机型可能有WebView错位，鸿蒙版本的先不放了，太不稳定了，再说放出来现在也装不了HAP，鸿蒙用户先装APK就行(先放个HMOS的图吧</p>
+        <br>
+        <img src="http://remedgit.github.io/src/HMOSBLOG.jpg"></img>
+        <br>
+        <p>完全开源，不放心直接看源码编译</p>
+        <br>
+        <button class="mdui-btn mdui-ripple mdui-ripple-white mdui-color-indigo mdui-btn-raised" onclick="window.location.href='http://github.com/remedgit/BlogApp'">查看源码</button>
+    </main>
+
+    <footer>
+        <p>Remedgit</p>
+    </footer>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+</html>
