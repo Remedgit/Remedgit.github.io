@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remedgit's Blog Reader</title>
+  
+   <style>
+        header {
+        }
+        main {
+            background: #fff; /* 主要内容区域背景设置为白色 */
+            padding: 1em;
+            flex: 1;
+            text-align: center;
+        }
+        main {
+            background: #fff; /* 主要内容区域背景设置为白色 */
+            padding: 1em;
+            flex: 1;
+        }
+
+        article {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            background: #fff; /* 将底部背景色设置为白色 */
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+</head>
+<body>
+  <header>
+       <div class="mdui-toolbar mdui-color-indigo">
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-1'}">
+    <i class="mdui-icon material-icons">menu</i>
+  </button>
+     <ul class="mdui-menu" id="example-1">
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io" class="mdui-ripple">主页</a>
+      </li>
+      <li class="mdui-menu-item" disabled>
+        <a href="javascript:;">标签</a>
+      </li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
+      </li>
+      <li class="mdui-divider"></li>
+      <li class="mdui-menu-item">
+        <a href="https://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
+      </li>
+    </ul>
+  <span class="mdui-typo-title">RemedgitBlogReader</span>
+  <div class="mdui-toolbar-spacer"></div>
+    <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
+    <i class="mdui-icon material-icons">&#xe338;</i>
+  </a>
+</div>
+    </header>
+    <main>
+  <div id="content">
+    <blockquote>
+      <p>各位大家好，我是Remedgit，我正在尝试新的视频风格
+      <strong>今天给大家带来的是macOS修改系统文件</strong>
+      话不多说我们开始</p>
+      </blockquote>
+      <h1>第一步:关闭系统保护</h1>
+      <p>普通的macOS都会有一个名为SIP的程序来保护系统文件不被修改，我们要修改系统图标的第一步就是关闭这个东西:</p>
+      <h3>进入恢复模式</h3>
+      <ul>
+      <li>Intel芯片Mac
+        开机时按住option按键，来到选择菜单后按下command + R</li>
+      <li>Apple芯片Mac
+        关机后按住开机按钮来到选择菜单，选择&quot;选项&quot;(一个圆形的设置图标)启动</li>
+      </ul>
+      <h3>关闭SIP</h3>
+      <ul>
+      <li>打开实用工具菜单，打开终端，输入<pre><code class="language-bash">csrutil disable
+csrutil authenticated-root disable
+      </code></pre>
+        然后重启电脑</li>
+      </ul>
+      <h1>挂载系统分区</h1>
+      <ul>
+      <li>打开磁盘工具，找到带有访达图标的磁盘，下面的表格中有一个设备，如:disk3s1s1 把disk3s1s1后面的s1删掉(只删一个)，因为这是快照编号</li>
+      <li>打开终端，输入</li>
+      </ul>
+      <pre><code class="language-bash">mkdir ~/mnt
+sudo mount -o nobrowse -t apfs /dev/diskxsx ~/mnt
+      </code></pre>
+      <p>  这里的x s x就是上面说的，把x替换掉</p>
+      <ul>
+      <li>修改文件
+      接下来你就可以访问~/mnt修改系统文件了</li>
+      </ul>
+      <h1>创建快照</h1>
+      <p>因为现在的macOS是APFS的原因，每次启动都会启动快照，所以如果你不再重新创建一遍快照，你做的所有修改都是没用的</p>
+      <ul>
+      <li>Intel芯片Mac
+      打开终端输入</li>
+      </ul>
+      <pre><code class="language-bash">sudo bless --mount &quot;$HOME/mnt/System/Library/CoreServices/&quot; --bootefi --create-snapshot
+      </code></pre>
+      <p>然后重启</p>
+      <ul>
+      <li>Apple芯片Mac
+      打开终端输入</li>
+      </ul>
+      <pre><code class="language-bash">sudo bless --mount &quot;$HOME/mnt/System/Library/CoreServices/&quot; --setBoot --create-snapshot
+      </code></pre>
+      <p>然后重启，接下来就能看到你做的修改了</p>
+      
+  </div>
+  </main>
+  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
