@@ -61,7 +61,7 @@
     </header>
   <div id="content"></div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   // 获取URL参数
   const queryParams = new URLSearchParams(window.location.search);
   const articleId = queryParams.get('read');
@@ -79,13 +79,19 @@
     })
     .then(markdown => {
       // 使用marked.js转换Markdown到HTML
-      document.getElementById('content').innerHTML = marked(markdown);
+      if (typeof marked === 'function') {
+        document.getElementById('content').innerHTML = marked(markdown);
+      } else {
+        console.error('marked is not defined');
+        document.getElementById('content').innerHTML = '<p>Error loading content...</p>';
+      }
     })
     .catch(error => {
       console.error('Fetching Markdown failed', error);
       document.getElementById('content').innerHTML = '<p>Error loading content...</p>';
     });
 });
+
 
   </script>
   <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
