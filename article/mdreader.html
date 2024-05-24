@@ -67,7 +67,7 @@
   const articleId = queryParams.get('read');
 
   // 构建Markdown文件的URL
-  const markdownUrl = `article/${articleId}.md`;
+  const markdownUrl = `${articleId}.md`;
 
   // 从服务器获取Markdown文件
   fetch(markdownUrl)
