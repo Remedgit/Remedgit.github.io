@@ -41,31 +41,34 @@
 </head>
 <body>
     <header>
-       <div class="mdui-toolbar mdui-color-indigo">
-  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#example-1'}">
-    <i class="mdui-icon material-icons">menu</i>
-  </button>
-     <ul class="mdui-menu" id="example-1">
-      <li class="mdui-menu-item">
-        <a href="https://remedgit.github.io" class="mdui-ripple">主页</a>
-      </li>
-      <li class="mdui-menu-item" disabled>
-        <a href="javascript:;">标签</a>
-      </li>
-      <li class="mdui-menu-item">
-        <a href="https://remedgit.github.io/notice.html" class="mdui-ripple">公告</a>
-      </li>
-      <li class="mdui-divider"></li>
-      <li class="mdui-menu-item">
-        <a href="https://remedgit.github.io/about.html" class="mdui-ripple">关于</a>
-      </li>
-    </ul>
-  <span class="mdui-typo-title">RemedgitBlog</span>
-  <div class="mdui-toolbar-spacer"></div>
-    <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
-    <i class="mdui-icon material-icons">&#xe338;</i>
-  </a>
-</div>
+  <div class="mdui-toolbar mdui-color-indigo">
+    <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#drawer'}">
+      <i class="mdui-icon material-icons">menu</i>
+    </button>
+    <span class="mdui-typo-title">Remedgit2024 Blog-PC</span>
+    <div class="mdui-toolbar-spacer"></div>
+      <a href="https://remedgit.github.io/tap.html" class="mdui-btn mdui-btn-icon">
+      <i class="mdui-icon material-icons">&#xe338;</i>
+    </a>
+  </div>
+  <div class="mdui-drawer mdui-drawer-close" id="drawer">
+    <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://remedgit.github.io'">
+      <i class="mdui-list-item-icon mdui-icon material-icons">short_text</i>
+      <div class="mdui-list-item-content">文章</div>
+    </li>
+    <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://remedgit.github.io/notice.html'">
+      <i class="mdui-list-item-icon mdui-icon material-icons">notifications</i>
+      <div class="mdui-list-item-content">公告</div>
+    </li>
+    <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://remedgit.github.io/about.html'">
+      <i class="mdui-list-item-icon mdui-icon material-icons">account_circle</i>
+      <div class="mdui-list-item-content">关于我</div>
+    </li>
+    <li class="mdui-list-item mdui-ripple" onclick="window.location.href='http://46.17.45.198:5244/'">
+      <i class="mdui-list-item-icon mdui-icon material-icons">file_download</i>
+      <div class="mdui-list-item-content">资源站(beta)</div>
+    </li>
+  </div>
     </header>
     <main>
         <article class="mdui-ripple mdui-hoverable">
