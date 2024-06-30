@@ -10,6 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Remedgit's Blog Reader</title>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
          <style>
              .center-div {
             margin: 0 auto;
@@ -71,6 +73,7 @@
     </li>
   </div>
     <div id="content" class="center-div mdui-shadow-3"></div>
+    <div id="gitalk-container" class="center-div"></div>
     <script>
         // 获取URL参数
         function getQueryParam(name) {
@@ -96,6 +99,14 @@
         } else {
             document.getElementById('content').innerHTML = 'No file specified.';
         }
+    var gitalk = new Gitalk({
+          clientID: 'Ov23liTrzOV6OEOFKjW3', // GitHub Application Client ID
+          clientSecret: '84bff1e94dc7ddd0a26e3c41912e354588ed9a9b',
+          repo: 'Gitalk-comment'      // 存放评论的仓库
+          owner: 'Remedgit',          // 仓库的创建者，
+          admin: ['Remedgit'],        // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+          id: filename,      // 用于标记评论是哪个页面的
+})
     </script>
     
     <!-- MDUI JavaScript -->
