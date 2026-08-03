@@ -1,0 +1,17 @@
+Package: westcityfish.xuanwu.fix
+Version: 2.5.1
+Architecture: iphoneos-arm64
+Maintainer: 东城鱼
+Installed-Size: 96
+Depends: com.opa334.libsandy, cy+cpu.arm64, firmware (>= 14.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Conflicts: com.foxfort.checkl0ck, com.yourepo.plat-ykor.check4round, me.krit.lockdown
+Filename: debs/westcityfish.xuanwu.fix_2.5.1_iphoneos-arm64.deb
+Size: 10850
+MD5sum: ab8185271e2372b6359719f8d986713b
+SHA1: 08f5e5711d753e8279fad175da3a40722871794b
+SHA256: 53fc5f5e171acae76e1e69bb8e3a3696748a317ca6799fbd9d71350d3cbc3b08
+Section: Tweaks
+Description: 一千万以内最好的插件
+Author: 东城鱼
+Name: 玄武修复
+
